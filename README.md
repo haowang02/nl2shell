@@ -2,14 +2,16 @@
 
 `nl2shell.sh` converts a natural language request into a single shell command by calling an OpenAI-compatible chat completions API.
 
-## Requirements
-
-- `curl`
-- `jq`
-
-```
-
 ## Install In zsh
+
+Install dependencies
+
+```bash
+# macOS
+brew install jq
+# Ubuntu
+sudo apt update && sudo apt install -y jq
+```
 
 Add a function to `~/.zshrc`.
 
