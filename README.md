@@ -2,6 +2,8 @@
 
 `nl2shell.sh` converts a natural language request into a single shell command by calling an OpenAI-compatible chat completions API.
 
+![](example.png)
+
 ## Install In zsh
 
 Install dependencies
