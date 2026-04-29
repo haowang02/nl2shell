@@ -28,7 +28,7 @@ ai () {
 	fi
 	start=$EPOCHREALTIME
 	# Change this line to use your script path, model, base URL, and API key.
-	cmd="$(command /path/to/nl2shell.sh --model qwen3.6-plus --base-url https://coding.dashscope.aliyuncs.com/v1 --api-key $ALI_API_KEY "$@")" || return
+	cmd="$(command /path/to/nl2shell.sh --model deepseek-v4-flash --base-url https://api.deepseek.com --api-key "$DEEPSEEK_API_KEY" "$@")" || return
 	end=$EPOCHREALTIME
 	elapsed=$(printf '%.1f' "$(( end - start ))" 2>/dev/null || print -r -- '?')
 	print -Pn "%F{yellow}[${elapsed}s]%f  %B"
