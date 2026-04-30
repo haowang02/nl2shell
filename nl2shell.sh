@@ -165,6 +165,6 @@ if [ -z "$CMD" ]; then
 fi
 
 # Strip markdown code fences if present
-CMD=$(echo "$CMD" | sed -e 's/^```[a-z]*[[:space:]]*//' -e 's/[[:space:]]*```$//' -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+CMD=$(echo "$CMD" | sed -e '/<think>/,/<\/think>/d' -e '/./,$!d' -e 's/^```[a-z]*[[:space:]]*//' -e 's/[[:space:]]*```$//' -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
 
 printf '%s\n' "$CMD"
