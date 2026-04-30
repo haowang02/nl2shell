@@ -113,7 +113,7 @@ ${API_KEY_SETUP}
   print -Pn \"%F{yellow}[\${elapsed}s]%f  %B\"
   print -rn -- \"\$cmd\"
   print -P \"%b\"
-  print -z -- \"\$cmd\"
+  print -zr -- \"\$cmd\"
 }
 ${END_MARKER}
 "
