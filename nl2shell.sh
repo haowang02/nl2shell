@@ -117,7 +117,7 @@ for tool in git docker kubectl npm yarn pnpm python3 python pip3 pip brew apt dn
   command -v "$tool" &>/dev/null && TOOLS="$TOOLS $tool"
 done
 
-SYSTEM_PROMPT="You are a command-line assistant. Convert the user's natural language request into a single shell command. Output ONLY the raw shell command. No explanations, no markdown formatting, no code fences. Just the bare executable command.
+SYSTEM_PROMPT="You are a command-line assistant. Convert the user's natural language request into a single shell command. Always output exactly one single-line shell command. Do not include line breaks or line-continuation characters. If multiple commands could satisfy the request, choose the simplest and most direct command. Output ONLY the raw shell command. No explanations, no markdown formatting, no code fences. Just the bare executable command.
 
 Environment context:
 - OS: $OS_NAME $OS_VERSION
